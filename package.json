@@ -1,0 +1,51 @@
+{
+    "name": "gulp-project",
+    "version": "1.0.0",
+    "description": "gulp project",
+    "scripts": {},
+    "lint-staged": {
+        "*.scss": "stylelint"
+    },
+    "keywords": [
+        "gulp",
+        "js",
+        "sass",
+        "pug",
+        "linters"
+    ],
+    "author": "author",
+    "license": "WTFPL",
+    "devDependencies": {
+        "@babel/core": "^7.14.3",
+        "@babel/preset-env": "^7.14.4",
+        "babel-loader": "^8.2.2",
+        "browser-sync": "^2.26.14",
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-imagemin": "^7.1.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-pug": "^4.0.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-svg-sprite": "^1.5.0",
+        "gulp-uglify-es": "^2.0.0",
+        "gulp-webp": "^4.0.1",
+        "node-sass": "^6.0.0",
+        "stylelint": "^13.13.1",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^22.0.0",
+        "stylelint-order": "^4.1.0",
+        "stylelint-scss": "^3.19.0",
+        "vanilla-lazyload": "^17.4.0",
+        "webpack": "^5.38.1",
+        "webpack-stream": "^6.1.2"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1",
+        "pug-include-glob": "^0.4.3"
+    }
+}

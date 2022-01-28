@@ -1,0 +1,33 @@
+@mixin mq($size, $type: max, $pixels: $breakpoint-sm) {
+	@if $size == 'xxs' {
+		@media screen and (#{$type}-width: $breakpoint-xxs) {
+			@content;
+		}
+	} @else if $size == 'xs' {
+		@media screen and (#{$type}-width: $breakpoint-xs) {
+			@content;
+		}
+	} @else if $size == 'sm' {
+		@media screen and (#{$type}-width: $breakpoint-sm) {
+			@content;
+		}
+	} @else if $size == 'md' {
+		@media screen and (#{$type}-width: $breakpoint-md) {
+			@content;
+		}
+	} @else if $size == 'lg' {
+		@media screen and (#{$type}-width: $breakpoint-lg) {
+			@content;
+		}
+	} @else if $size == 'xl' {
+		@media screen and (#{$type}-width: $breakpoint-xl) {
+			@content;
+		}
+	} @else if $size == 'custom' {
+		@media screen and (#{$type}-width: $pixels + px) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}

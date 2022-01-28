@@ -1,0 +1,22 @@
+:root {
+	// Typography
+	--main-ff: "NoirPro", sans-serif;
+
+	// colors
+	--color-dark: #393939;
+	--gradient-bg: radial-gradient(20.46% 33.99% at 0% 0%, #FF9254 0%, rgba(251, 188, 129, 0) 100%);;
+	--color-white: #fff;
+	--color-dark-grey: #727272;
+	--color-orangre: #F36A1D;
+
+	// transition
+	--main-taransition: 200ms;
+}
+
+$breakpoint-xxs: 480px;
+$breakpoint-xs: 575px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 991px;
+$breakpoint-lg: 1199px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1680px;

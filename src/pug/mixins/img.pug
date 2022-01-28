@@ -1,0 +1,19 @@
+mixin imgLazy(src, alt)
+	img(class="lazy", data-src=src, src="img/placeholder.png" alt=alt)&attributes(attributes)
+
+mixin pictureLazy(src, alt, srcPlacegolder="img/placeholder.png")
+	-const srcParts = src.split(".")
+	-const [srcFirstPart, extname] = srcParts
+
+	picture
+		source(type="image/webp", data-srcset="img/" + `${srcFirstPart}.webp`, srcset=srcPlacegolder)
+		img(class="lazy", data-src="img/" +`${srcFirstPart}.${extname}`, alt=alt)&attributes(attributes)
+
+
+mixin picture(src, alt)
+	-const srcParts2 = src.split(".")
+	-const [srcFirstPart2, extname2] = srcParts2
+
+	picture
+		source(type="image/webp", srcset="img/" + `${srcFirstPart2}.webp`)
+		img(src="img/" + `${srcFirstPart2}.${extname2}`, alt=alt)&attributes(attributes)
