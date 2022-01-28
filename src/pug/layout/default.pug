@@ -8,6 +8,7 @@ html(lang=siteLang)
 	head
 		include ../parts/head.pug
 	body(class=bodyClass)
+		.preloader
 		.page-wrapper
 			block header
 				include ../parts/header.pug
@@ -16,6 +17,9 @@ html(lang=siteLang)
 
 			block footer
 				include ../parts/footer.pug
+			.modal
+				include ../parts/modalMain
+				include ../parts/modalLike
 
 	block scripts
 		script(src="js/main.js?v=" + siteVersion)

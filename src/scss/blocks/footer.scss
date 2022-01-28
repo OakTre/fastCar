@@ -1,3 +1,14 @@
 .footer {
-	//
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 4;
+	width: 100%;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding-bottom: 4rem;
+	}
 }

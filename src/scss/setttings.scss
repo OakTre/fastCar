@@ -7,6 +7,30 @@
 html {
 	font-size: 10px;
 	line-height: 1.4;
+
+	@include mq(custom, min, 2100) {
+		font-size: 14px;
+	}
+
+	@include mq(custom, max, 1536) {
+		font-size: 9px;
+	}
+
+	@include mq(custom, max, 1366) {
+		font-size: 8px;
+	}
+
+	@include mq(custom, max, 1280) {
+		font-size: 6px;
+	}
+
+	@include mq(sm) {
+		font-size: 10px;
+	}
+
+	@include mq(custom, max, 320) {
+		font-size: 9px;
+	}
 }
 
 body {
@@ -49,6 +73,11 @@ a {
 	max-width: 100%;
 	margin: 0 auto;
 	padding: 0 64px;
+
+	@include mq(lg) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
 
 .page-wrapper {

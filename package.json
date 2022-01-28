@@ -40,6 +40,7 @@
         "stylelint-config-standard": "^22.0.0",
         "stylelint-order": "^4.1.0",
         "stylelint-scss": "^3.19.0",
+        "swiper": "^7.4.1",
         "vanilla-lazyload": "^17.4.0",
         "webpack": "^5.38.1",
         "webpack-stream": "^6.1.2"
