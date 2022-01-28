@@ -1,8 +1,8 @@
-# Goalprofit
+# FastCar
 
 ## Ссылки
 
-1. [Главная](https://oaktre.github.io/goalprofit/app/)
+1. [Главная](https://oaktre.github.io/fastCar/app/)
 
 
 
