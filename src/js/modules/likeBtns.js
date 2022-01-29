@@ -11,11 +11,22 @@ export function LikeBtns() {
 		btn.addEventListener("click", () => {
 			btn.classList.add("is-active");
 			let slideId =  btn.dataset.slideId;
-			console.log(slideId);
 			let likeUrl = `https://private-anon-b88cb4687f-grchhtml.apiary-mock.com/slides/${slideId}/like`;
 			let likesCount = Number(btn.dataset.likes);
 			likesCount += 1;
 			btn.closest(".intro-slider__likes").querySelector(".intro-slider__likes-count-num").innerHTML = " " + likesCount;
+
+			// сохраняем данные в localstorage
+			function initialState(item){
+				localStorage.setItem("likes", JSON.stringify(item));
+			}
+
+			let likesData = {
+				id: slideId,
+				count: likesCount
+			}
+			window.arrLikes.push(likesData);
+			initialState(window.arrLikes);
 
 			sendRequest("POST", likeUrl)
 				.then((resp) => {

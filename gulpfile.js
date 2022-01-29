@@ -30,7 +30,7 @@ const styles = () => {
 	return src("./src/scss/style.scss")
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: "expanded"
+			outputStyle: "compressed"
 		}).on("error", notify.onError()))
 		.pipe(rename({
 			suffix: ".min"
@@ -53,7 +53,7 @@ const stylesVendor = () => {
 	return src("./src/scss/vendor.scss")
 			.pipe(sourcemaps.init())
 			.pipe(sass({
-					outputStyle: "expanded"
+					outputStyle: "compressed"
 			}))
 			.pipe(rename({
 					suffix: ".min"
@@ -180,7 +180,7 @@ exports.default = series(clean, parallel(pugBuild, scripts, stylesVendor, imgToA
 const stylesBuild = () => {
 	return src("./src/scss/style.scss")
 		.pipe(sass({
-			outputStyle: "expanded"
+			outputStyle: "compressed"
 		}).on("error", notify.onError()))
 		.pipe(rename({
 			suffix: ".min"

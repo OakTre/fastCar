@@ -10,6 +10,10 @@
 		align-items: center;
 		justify-content: flex-end;
 		padding-top: 5.3rem;
+
+		@include mq(sm) {
+			padding-top: 1.7rem;
+		}
 	}
 
 	&__btn {

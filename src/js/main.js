@@ -16,6 +16,11 @@ window.onload = function() {
 };
 
 documentReady(() => {
+	// масств для лайков
+	let arrLikes = [];
+	// делаем глобальной переменную
+	window.arrLikes = arrLikes;
+
 	lazyImages();
 	initSlider();
 	initModal();

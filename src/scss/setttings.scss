@@ -41,6 +41,9 @@ body {
 	line-height: 2.6rem;
 	letter-spacing: -0.05em;
 	background: var(--gradient-bg);
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -77,6 +80,11 @@ a {
 	@include mq(lg) {
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+
+	@include mq(sm) {
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 }
 

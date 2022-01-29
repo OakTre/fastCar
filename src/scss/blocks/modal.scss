@@ -48,6 +48,17 @@
 				padding: 4rem 3.2rem 4rem;
 			}
 		}
+
+		@include mq(sm) {
+			max-width: none;
+			width: 100%;
+			transform: none;
+			top: auto;
+			left: 0;
+			bottom: 0;
+			min-height: 0;
+			height: calc(100% - 8.2rem);
+		}
 	}
 
 	&__content {
@@ -55,6 +66,10 @@
 		height: 100%;
 		padding: 2.5rem 3.2rem 3.2rem 3.2rem;
 		position: relative;
+
+		@include mq(md) {
+			overflow: auto;
+		}
 	}
 
 	&__close-btn {
@@ -127,10 +142,18 @@
 	opacity: 0;
 	transform: translate(-50%, 10rem);
 	transition: opacity var(--transition-time), transform var(--transition-time);
+
+	@include mq(sm) {
+		transform: translate(0, 10rem);
+	}
 }
 
 .fadeInUp.animate-open {
 	opacity: 1;
 	transform: translate(-50%, -50%);
 	transition: opacity var(--transition-time), transform var(--transition-time);
+
+	@include mq(sm) {
+		transform: translate(0, 0);
+	}
 }
