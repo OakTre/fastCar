@@ -98,9 +98,12 @@ export class Modal {
 	close() {
 		if (this.modalContainer) {
 			this.modalContainer.classList.remove('animate-open');
-			this.modalContainer.classList.remove(this.animation);
-			this.modal.classList.remove('is-open');
-			this.modalContainer.classList.remove('modal-open');
+
+			setTimeout(() => {
+				this.modalContainer.classList.remove(this.animation);
+				this.modal.classList.remove('is-open');
+				this.modalContainer.classList.remove('modal-open');
+			}, this.speed);
 
 			this.enableScroll();
 			this.options.isClose(this);

@@ -87,6 +87,14 @@
 		margin-bottom: 1.3rem;
 		transition: background-color var(--main-taransition);
 
+		&.is-active {
+			pointer-events: none;
+
+			.intro-slider__likes-btn-icon {
+				fill: #F36A1D;
+			}
+		}
+
 		&:hover {
 			background-color: rgba($color: #F36A1D, $alpha: 0.1);
 

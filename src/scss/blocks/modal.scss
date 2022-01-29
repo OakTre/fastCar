@@ -1,4 +1,5 @@
 .modal {
+	--transition-time: 0.3s;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -29,6 +30,23 @@
 
 		&.modal-open {
 			display: block;
+		}
+
+		&.modal-like {
+			min-height: auto;
+
+			.modal__heading {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+
+			.modal__text {
+				text-align: center;
+			}
+
+			.modal__content {
+				padding: 4rem 3.2rem 4rem;
+			}
 		}
 	}
 
@@ -93,4 +111,26 @@
 			margin-bottom: 0;
 		}
 	}
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+	opacity: 1;
+	transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+	opacity: 0;
+	transform: translate(-50%, 10rem);
+	transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: opacity var(--transition-time), transform var(--transition-time);
 }
