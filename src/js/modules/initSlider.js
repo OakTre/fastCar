@@ -8,7 +8,7 @@ export default () => {
 	const startUrl = "https://private-anon-b88cb4687f-grchhtml.apiary-mock.com/slides?offset=0&limit=3";
 	const introSliderEl = document.querySelector(".intro-slider");
 	const swiperWrapper = document.querySelector(".js-swiper-warpper");
-	var interleaveOffset = 0.7;
+	let interleaveOffset = 0.7;
 
 	// функция для подстановки в соц. href ссылок для репоста
 	function setShareLinks(curSlide) {
@@ -56,24 +56,24 @@ export default () => {
 		},
 		on: {
 			progress: function (swiper) {
-				for (var i = 0; i < swiper.slides.length; i++) {
-					var slideProgress = swiper.slides[i].progress;
-					var innerOffset = swiper.width * interleaveOffset;
-					var innerTranslate = slideProgress * innerOffset;
+				for (let i = 0; i < swiper.slides.length; i++) {
+					let slideProgress = swiper.slides[i].progress;
+					let innerOffset = swiper.width * interleaveOffset;
+					let innerTranslate = slideProgress * innerOffset;
 					swiper.slides[i].querySelector(".intro-slider__item-layer").style.transform =
 						"translate3d(" + innerTranslate + "px, 0, 0)";
 				}
 			},
 			setTransition: function (swiper, speed) {
-				for (var i = 0; i < swiper.slides.length; i++) {
+				for (let i = 0; i < swiper.slides.length; i++) {
 					swiper.slides[i].style.transition = speed + "ms";
 					swiper.slides[i].querySelector(".intro-slider__item-layer").style.transition =
 						speed + "ms";
 				}
 			},
 			slideChange: function (swiper) {
-				const index_currentSlide = swiper.realIndex;
-				const currentSlide = swiper.slides[index_currentSlide]
+				const indexCurrentSlide = swiper.realIndex;
+				const currentSlide = swiper.slides[indexCurrentSlide]
 				setShareLinks(currentSlide);
 			},
 		}

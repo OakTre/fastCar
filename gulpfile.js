@@ -139,7 +139,7 @@ const copyFonts = () => {
 
 const resourses = () => {
 	return src("./src/resourses/**")
-		.pipe(dest("./app"));
+		.pipe(dest("./app/resourses"));
 }
 
 const clean = () => {
@@ -174,7 +174,7 @@ exports.watchFiles = watchFiles;
 exports.pugBuild = pugBuild;
 exports.webp = toWebp;
 
-exports.default = series(clean, parallel(pugBuild, scripts, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts), styles, watchFiles);
+exports.default = series(clean, parallel(pugBuild, scripts, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts, resourses), styles, watchFiles);
 
 // build версия ---- gulp.build
 const stylesBuild = () => {
@@ -225,7 +225,7 @@ const scriptsBuild = () => {
 		.pipe(dest("./app/js"))
 
 }
-exports.build = series(clean, parallel(pugBuild, scriptsBuild, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts), stylesBuild, watchFiles);
+exports.build = series(clean, parallel(pugBuild, scriptsBuild, stylesVendor, imgToApp, toWebp, svgSprites, copySvg, copyFonts, resourses), stylesBuild, watchFiles);
 
 
 // оптимизировать изображения ---- gulp.minifyImg
